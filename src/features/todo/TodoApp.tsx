@@ -1,9 +1,8 @@
 import TodoForm from "./TodoForm.tsx";
 import {useRef} from "react";
 import {useTodos} from "./hooks/useTodos.ts";
-// import IconButton from "../../shared/ui/IconButton.tsx";
-// import {CheckSquare, Square} from "lucide-react";
 import TodoList from "./TodoList.tsx";
+import TodoStats from "./TodoStats.tsx";
 
 const TodoApp = () => {
 
@@ -27,6 +26,10 @@ const TodoApp = () => {
                     onToggle={toggleTodo}
                     onEdit={editTodo}
                     onDelete={deleteTodo}
+                />
+
+                <TodoStats
+                    todos={todos}
                 />
             </div>
         </>
